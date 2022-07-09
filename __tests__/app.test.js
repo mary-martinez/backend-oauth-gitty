@@ -15,7 +15,7 @@ describe('backend-express-template routes', () => {
       /https:\/\/github.com\/login\/oauth\/authorize\?client_id=[\w\d]+&scope=user&redirect_uri=http:\/\/localhost:7890\/api\/v1\/github\/callback/i
     );
   });
-  it('should login a user and redirect to /api/v1/github/dashboard', async () => {
+  it('should login a user and redirect to /api/v1/github/posts', async () => {
     const res = await request
       .agent(app)
       .get('/api/v1/github/callback?code=42')
